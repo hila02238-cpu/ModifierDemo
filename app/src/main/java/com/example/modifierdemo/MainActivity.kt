@@ -1,5 +1,7 @@
 package com.example.modifierdemo
 
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.border
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -43,6 +45,15 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         mymodifier,
         fontSize = 40.sp,
         fontWeight = FontWeight.Bold
+    )
+}
+
+@Composable
+fun CustomImage(image: Int, modifier: Modifier = Modifier) {
+    Image(
+        painter = painterResource(image),
+        contentDescription = null,
+        modifier = modifier
     )
 }
 
